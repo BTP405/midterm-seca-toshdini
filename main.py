@@ -45,11 +45,11 @@ class TestCourseManagementSystem(unittest.TestCase):
 
     def test_submit_grade(self): # 6 marks
         self.student1.submit_grade(self.course1, self.assignment1, 90)
-        self.assertEqual(self.student1.grades[self.course1.course_name][self.assignment1], 90)
+        self.assertEqual(self.student1.grades[self.course1.course_name][self.assignment1.assessment_type], 90)
         self.student2.submit_grade(self.course1, self.assignment1, 85)
-        self.assertEqual(self.student2.grades[self.course1.course_name][self.assignment1], 85)
+        self.assertEqual(self.student2.grades[self.course1.course_name][self.assignment1.assessment_type], 85)
         self.student2.submit_grade(self.course1, self.exam1, 75)
-        self.assertEqual(self.student2.grades[self.course1.course_name][self.exam1], 75)
+        self.assertEqual(self.student2.grades[self.course1.course_name][self.exam1.assessment_type], 75)
 
 if __name__ == '__main__':
     unittest.main()

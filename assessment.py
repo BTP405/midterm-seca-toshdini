@@ -14,6 +14,7 @@ class Assessment:
     Methods:
         None
     """
+    
 
     def __init__(self, assessment_type):
         """
